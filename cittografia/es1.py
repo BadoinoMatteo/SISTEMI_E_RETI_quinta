@@ -32,7 +32,6 @@ def cifratura():
     chiaveCifrata=[]
     messaggioCifrato=[]
     sommaMexChiave= []
-    offset=[]
 
     #cifratura chiave
     for c in chiave:
@@ -47,11 +46,6 @@ def cifratura():
     #somma messaggio e chiave
     for a in range(0,len(messaggioCifrato)):
         sommaMexChiave.append(str(int(chiaveCifrata[a])+ int(messaggioCifrato[a]) % 21))
-        if(int(sommaMexChiave[a])>21):
-            offset.append(1)
-        else:
-            offset.append(0)
-    print(offset)
     print(sommaMexChiave)
 
 if __name__ == '__main__':
